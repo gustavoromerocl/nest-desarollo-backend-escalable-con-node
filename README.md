@@ -132,3 +132,4 @@ Es importante recalcar que esto no es una introducción a TypeScript, son concep
 # Bibliografía
 
 [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
+[Destructuring](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

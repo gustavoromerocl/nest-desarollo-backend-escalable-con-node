@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export class Pokemon {
   constructor(
     public readonly id: number,
@@ -14,6 +16,13 @@ export class Pokemon {
 
   speak() {
     console.log(`${this.name}, ${this.name}`);
+  }
+
+  async getMoves() {
+    const { data } = await axios.get('https://pokeapi.co/api/v2/pokemon/4');
+    console.log( data.moves );
+
+    return data.moves;
   }
 }
 
