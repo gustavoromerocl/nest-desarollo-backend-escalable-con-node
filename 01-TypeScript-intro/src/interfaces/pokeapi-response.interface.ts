@@ -1,4 +1,4 @@
-export interface PokeapiReponse {
+export interface PokeapiResponse {
   abilities:                Ability[];
   base_experience:          number;
   forms:                    Species[];
