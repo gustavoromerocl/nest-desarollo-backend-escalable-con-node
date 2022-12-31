@@ -4,7 +4,7 @@ import { setupCounter } from './counter'
 
 // import { name, age } from './bases/01-types'
 // import { charmander } from './bases/03-classes'
-import { charmander } from './bases/04-injection'
+import { charmander } from './bases/05-decorators'
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
