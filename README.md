@@ -162,3 +162,4 @@ Adicionalmente estaremos creando un Rest Api inicial para ir explicando cada con
 [Destructuring](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 [Controllers](https://docs.nestjs.com/controllers)
 [Services](https://docs.nestjs.com/providers#services)
+[Http status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
