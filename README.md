@@ -125,9 +125,36 @@ Decoradores de clases y métodos
 
 Es importante recalcar que esto no es una introducción a TypeScript, son conceptos que necesito exponer porque los usaremos en el curso de Nest.
 
+## Sección 3: Primeros pasos en Nest
 
+### Temas puntuales e la sección
 
+Temas puntuales de la sección
+Estamos entrando a nuestra primera sección sobre Nest, aquí veremos:
 
+¿Qué es Nest?
+
+¿Por qué usarlo?
+
+Explicación sobre cada archivo en un proyecto nuevo de Nest
+
+Core Nest building blocks
+
+Módulos
+
+Controladores (Post, Patch, Get, Delete)
+
+Primeros decoradores
+
+Servicios
+
+Inyección de dependencias
+
+Pipes
+
+Exception Filters
+
+Adicionalmente estaremos creando un Rest Api inicial para ir explicando cada concepto paso a paso.
 
 # Bibliografía
 
