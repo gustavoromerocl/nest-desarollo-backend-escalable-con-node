@@ -187,3 +187,4 @@ Algunos decoradores del Class Validator útiles
 [Http status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 [UUID](https://www.npmjs.com/package/uuid)
 [Pipes](https://docs.nestjs.com/pipes)
+[Class validator](https://github.com/typestack/class-validator#validation-decorators)
