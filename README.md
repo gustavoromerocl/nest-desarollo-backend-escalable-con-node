@@ -156,6 +156,28 @@ Exception Filters
 
 Adicionalmente estaremos creando un Rest Api inicial para ir explicando cada concepto paso a paso.
 
+## Sección 4: DTOs y Validación de información
+
+### Temas puntuales de la sección
+
+Esta sección terminaremos el POST, PATCH y DELETE de nuestro CRUD inicial, pero de forma puntual veremos:
+
+DTO (Data Transfer Object)
+
+Patch, Post, Delete
+
+Validaciones automáticas
+
+Class Validator
+
+Class Transformer
+
+Seguir el principio DRY (Don't repeat yourself)
+
+Algunos decoradores del Class Validator útiles
+
+
+
 # Bibliografía
 
 [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
