@@ -185,3 +185,4 @@ Algunos decoradores del Class Validator útiles
 [Controllers](https://docs.nestjs.com/controllers)
 [Services](https://docs.nestjs.com/providers#services)
 [Http status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+[uuid](https://www.npmjs.com/package/uuid)
