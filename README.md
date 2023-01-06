@@ -210,6 +210,28 @@ npm run build
 
 npm run start:dev
 
+## Sección 7: MongoDB Pokedex
+
+### Temas puntuales de la sección
+
+Esta sección enteramente se enfoca en la grabación a base de datos, pero puntualmente:
+
+Validaciones
+
+CRUD contra base de datos
+
+Docker y Docker Compose
+
+Conectar contenedor con filesystem (para mantener la data de la base de datos)
+
+Schemas
+
+Modelos
+
+DTOs y sus extensiones
+
+Respaldar a Github
+
 # Bibliografía
 
 [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
