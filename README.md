@@ -204,6 +204,12 @@ Servicios
 
 Controladores
 
+## Sección 6: Generar build de producción básico
+
+npm run build
+
+npm run start:dev
+
 # Bibliografía
 
 [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
