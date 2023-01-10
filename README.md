@@ -234,11 +234,12 @@ Respaldar a Github
 
 # Bibliografía
 
-[Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
-[Destructuring](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-[Controllers](https://docs.nestjs.com/controllers)
-[Services](https://docs.nestjs.com/providers#services)
-[Http status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
-[UUID](https://www.npmjs.com/package/uuid)
-[Pipes](https://docs.nestjs.com/pipes)
-[Class validator](https://github.com/typestack/class-validator#validation-decorators)
+* [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
+* [Destructuring](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+* [Controllers](https://docs.nestjs.com/controllers)
+* [Services](https://docs.nestjs.com/providers#services)
+* [Http status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+* [UUID](https://www.npmjs.com/package/uuid)
+* [Pipes](https://docs.nestjs.com/pipes)
+* [Class validator](https://github.com/typestack/class-validator#validation-decorators)
+* [Mongo plugin (NEST)](https://docs.nestjs.com/techniques/mongodb)
