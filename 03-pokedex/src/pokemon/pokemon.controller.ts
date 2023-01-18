@@ -28,8 +28,8 @@ export class PokemonController {
     return this.pokemonService.update(term, updatePokemonDto);
   }
 
-  @Delete(':term')
-  remove(@Param('term') term: string) {
-    return this.pokemonService.remove(term);
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.pokemonService.remove(id);
   }
 }
