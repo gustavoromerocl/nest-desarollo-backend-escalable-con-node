@@ -1,4 +1,4 @@
-import { BadGatewayException, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
+import { BadGatewayException, BadRequestException, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { isValidObjectId, Model } from 'mongoose';
 import { CreatePokemonDto } from './dto/create-pokemon.dto';
@@ -70,9 +70,11 @@ export class PokemonService {
     // const pokemon = await this.findOne( id );
 
     // await pokemon.deleteOne();
-    const result = this.pokemonModel.findByIdAndDelete( id );
-
-    return result;
+    // const result = await this.pokemonModel.findByIdAndDelete( id );
+    const { deletedCount } = await this.pokemonModel.deleteOne({_id: id});
+    if ( deletedCount === 0 )
+      throw new BadRequestException(`Pokemon with id "${ id }" not found`)
+    return;
   }
 
   private handleExceptions( error: any ) {
