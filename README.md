@@ -243,3 +243,22 @@ Respaldar a Github
 * [Pipes](https://docs.nestjs.com/pipes)
 * [Class validator](https://github.com/typestack/class-validator#validation-decorators)
 * [Mongo plugin (NEST)](https://docs.nestjs.com/techniques/mongodb)
+
+## Sección 8: Seed y paginación
+
+### Temas puntuales de la sección
+
+Esta sección tiene por objetivo aprender:
+
+Uso de modelos en diferentes módulos
+
+SEED para llenar la base de datos
+
+Paginación de resultados
+
+DTOs para Query parameters
+
+Transformaciones de DTOs
+
+También les mostraré varias formas de hacer inserciones por lote y varias formas de lograrlo.
+
