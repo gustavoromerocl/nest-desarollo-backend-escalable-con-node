@@ -97,7 +97,7 @@ Mucho mas.
 
 ## Sección 2: Breve introducción a typescript y conocimientos generales necesarios.
 
-### Temas puntuales e la sección
+### Temas puntuales de la sección
 
 Esta sección tiene por objetivo dar unas bases sobre TypeScript con la idea de que se familiaricen con los conceptos comunes usados en el día a día con Nest.
 
@@ -232,18 +232,6 @@ DTOs y sus extensiones
 
 Respaldar a Github
 
-# Bibliografía
-
-* [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
-* [Destructuring](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-* [Controllers](https://docs.nestjs.com/controllers)
-* [Services](https://docs.nestjs.com/providers#services)
-* [Http status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
-* [UUID](https://www.npmjs.com/package/uuid)
-* [Pipes](https://docs.nestjs.com/pipes)
-* [Class validator](https://github.com/typestack/class-validator#validation-decorators)
-* [Mongo plugin (NEST)](https://docs.nestjs.com/techniques/mongodb)
-
 ## Sección 8: Seed y paginación
 
 ### Temas puntuales de la sección
@@ -262,3 +250,40 @@ Transformaciones de DTOs
 
 También les mostraré varias formas de hacer inserciones por lote y varias formas de lograrlo.
 
+## Sección 9: Variables de entorno - Deployment y Dockerizar la aplicación
+
+### Temas puntuales de la sección
+
+En esta sección trabajaremos en la configuración de variables de entorno y su validación:
+
+Puntualmente veremos:
+
+Dockerizacion
+
+Mongo Atlas
+
+Env file
+
+joi
+
+Validation Schemas
+
+Configuration Module
+
+Recomendaciones para un Readme útil
+
+Despliegues
+
+Dockerfile
+
+# Bibliografía
+
+* [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
+* [Destructuring](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+* [Controllers](https://docs.nestjs.com/controllers)
+* [Services](https://docs.nestjs.com/providers#services)
+* [Http status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+* [UUID](https://www.npmjs.com/package/uuid)
+* [Pipes](https://docs.nestjs.com/pipes)
+* [Class validator](https://github.com/typestack/class-validator#validation-decorators)
+* [Mongo plugin (NEST)](https://docs.nestjs.com/techniques/mongodb)
