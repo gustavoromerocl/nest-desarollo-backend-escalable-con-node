@@ -276,6 +276,8 @@ Despliegues
 
 Dockerfile
 
+* [Heroku app](https://pokemon-nest-app.herokuapp.com/)
+
 # Bibliografía
 
 * [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
