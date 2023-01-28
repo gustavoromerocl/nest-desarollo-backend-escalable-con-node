@@ -297,3 +297,4 @@ git push heroku <master|main>
 * [Pipes](https://docs.nestjs.com/pipes)
 * [Class validator](https://github.com/typestack/class-validator#validation-decorators)
 * [Mongo plugin (NEST)](https://docs.nestjs.com/techniques/mongodb)
+* [Dockerfile](https://gist.github.com/Klerith/e7861738c93712840ab3a38674843490)
