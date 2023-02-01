@@ -21,6 +21,8 @@ npm i -g @nestjs/cli
 
 ```
 docker compose up -d
+
+docker compose -f docker-compose.prod.yaml --env-file .env.prod up --build
 ```
 
 5. Clonar el archivo __.env.template__ y renonmbrar la copia a __.env__
