@@ -278,19 +278,36 @@ Dockerfile
 
 * [Heroku app](https://pokemon-nest-app.herokuapp.com/)
 
-# Notas
+## Sección 10: TypeORM - Postgres
 
-Heroku redeploy sin cambios:
+### Temas puntuales de la sección
 
-```
-git commit --allow-empty -m "Tigger Heroku deploy"
-git push heroku <master|main>
-```
+En esta sección estaremos trabajando con:
 
-Mostrar los puertos usados por contenedores docker
-```
-sudo lsof -i -P -n | grep <port number>
-```
+TypeORM
+
+Postgres
+
+CRUD
+
+Constrains
+
+Validaciones
+
+Búsquedas
+
+Paginaciones
+
+DTOs
+
+Entities
+
+Decoradores de TypeORM para entidades
+
+Métodos BeforeInsert, BeforeUpdate
+
+Es una sección importante porque a partir de aquí, empezaremos a construir sobre ella relaciones, autenticación, autorización y websockets.
+
 # Bibliografía
 
 * [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
