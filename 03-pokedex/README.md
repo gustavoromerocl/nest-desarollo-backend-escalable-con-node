@@ -35,11 +35,35 @@ docker compose -f docker-compose.prod.yaml --env-file .env.prod up --build
 npm run start:dev
 ```
 
-6. Reconstruir la base de datos
+8. Reconstruir la base de datos
 
 ```
 GET: localhost:3000/api/v2/seed
 ```
+
+# Production build
+
+1. Crear el archivo .env.prod
+2. Llenar las variables de entorno de prod
+3. Crear la nueva imagen
+```
+docker compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+# Notas
+
+Heroku redeploy sin cambios:
+
+```
+git commit --allow-empty -m "Tigger Heroku deploy"
+git push heroku <master|main>
+```
+
+Mostrar los puertos usados por contenedores docker
+```
+sudo lsof -i -P -n | grep <port number>
+```
+
 ## Stack usado
 
 * MongoDB
