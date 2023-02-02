@@ -320,3 +320,4 @@ Es una sección importante porque a partir de aquí, empezaremos a construir sob
 * [Class validator](https://github.com/typestack/class-validator#validation-decorators)
 * [Mongo plugin (NEST)](https://docs.nestjs.com/techniques/mongodb)
 * [Dockerfile](https://gist.github.com/Klerith/e7861738c93712840ab3a38674843490)
+* [Database (Postgres)](https://docs.nestjs.com/techniques/database)
