@@ -1,5 +1,6 @@
 // https://gist.github.com/Klerith/1fb1b9f758bb0c5b2253dfc94f09e1b6
-import { BeforeInsert, BeforeUpdate, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, BeforeUpdate, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { ProductImage } from './product-image.entity';
 
 @Entity()
 export class Product {
@@ -46,6 +47,13 @@ export class Product {
     default: []
   })
   tags: string[]
+
+  @OneToMany(
+    () => ProductImage,
+    productImage => productImage.product,
+    {cascade: true}
+  )
+  images?: ProductImage[];
 
   @BeforeInsert()
   checkSlugInsert() {
