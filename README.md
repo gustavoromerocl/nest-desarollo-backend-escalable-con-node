@@ -308,6 +308,36 @@ Métodos BeforeInsert, BeforeUpdate
 
 Es una sección importante porque a partir de aquí, empezaremos a construir sobre ella relaciones, autenticación, autorización y websockets.
 
+## Sección 11: Relaciones en TypeORM
+
+### Temas puntuales de la sección
+
+Esta sección está cargada de contenido nuevo que les puede servir mucho, especialmente si trabajan con bases de datos relacionales.
+
+Temas que veremos:
+
+Relaciones
+
+De uno a muchos
+
+Muchos a uno
+
+Query Runner
+
+Query Builder
+
+Transacciones
+
+Commits y Rollbacks
+
+Renombrar tablas
+
+Creación de un SEED
+
+Aplanar resultados
+
+La idea es hacer que nuestro endpoint de creación y actualización de producto permita la actualización de una tabla secundaria de la misma forma como lo hemos creado en la sección pasada.
+
 # Bibliografía
 
 * [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)

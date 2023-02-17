@@ -13,3 +13,10 @@
 docker compose up -d
 ```
 6. Ejecutar ```npm run start:dev```
+
+# Notas
+
+Mostrar los puertos usados por contenedores docker
+```
+sudo lsof -i -P -n | grep <port number>
+```
