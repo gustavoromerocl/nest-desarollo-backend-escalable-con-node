@@ -14,6 +14,10 @@ docker compose up -d
 ```
 6. Ejecutar ```npm run start:dev```
 
+# Recursos
+
+[Teslo-Seed](https://gist.github.com/Klerith/1fb1b9f758bb0c5b2253dfc94f09e1b6)
+
 # Notas
 
 Mostrar los puertos usados por contenedores docker
