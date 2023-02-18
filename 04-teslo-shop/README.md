@@ -24,3 +24,7 @@ Mostrar los puertos usados por contenedores docker
 ```
 sudo lsof -i -P -n | grep <port number>
 ```
+
+# Bibliografía
+
+[Eager relations](https://typeorm.io/eager-and-lazy-relations)

@@ -37,14 +37,21 @@ export class ProductsService {
     }
   }
 
-  findAll(paginationDto: PaginationDto) {
+  async findAll(paginationDto: PaginationDto) {
     const { limit = 10, offset = 0 } = paginationDto;
 
-    return this.productRepository.find({
+    const products = await this.productRepository.find({
       take: limit,
       skip: offset,
-      //TODO: relaciones
+      relations: {
+        images: true
+      }
     });
+
+    return products.map(({images, ...rest}) => ({
+      ...rest,
+      images: images.map( img => img.url )
+    }))
   }
 
   async findOne(term: string) {
@@ -52,18 +59,30 @@ export class ProductsService {
     if (isUUID(term)) {
       product = await this.productRepository.findOneBy({ id: term });
     } else {
-      const queryBuilder = this.productRepository.createQueryBuilder();
+      const queryBuilder = this.productRepository.createQueryBuilder('prod'); //prod es un alias
       product = await queryBuilder
         .where(`UPPER(title) = :title or slug = :slug`, {
           title: term.toUpperCase(),
           slug: term.toLocaleLowerCase(),
-        }).getOne();
+        })
+        .leftJoinAndSelect('prod.images', 'prodImages') //El segundo argumento es un alias para la tabal de la relación
+        .getOne();
     }
 
     if (!product)
       throw new NotFoundException(`Product with id ${term} not found`);
 
     return product;
+  }
+
+
+  //Generamos un nuevo método para palnar las imágenes ya que al modificar el retorno el findOne rompe su funcionaliddad en otro métodos de la clase
+  async findOnePlane(term: string) {
+    const { images = [], ...rest } = await this.findOne( term );
+    return {
+      ...rest,
+      images: images.map(img=> img.url)
+    }
   }
 
   async update(id: string, updateProductDto: UpdateProductDto) {
