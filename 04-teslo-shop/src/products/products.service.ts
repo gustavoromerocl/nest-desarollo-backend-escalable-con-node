@@ -102,10 +102,28 @@ export class ProductsService {
     // Create query Runner 
     const queryRunner = this.dataSource.createQueryRunner();
 
+    await queryRunner.connect();
+    await queryRunner.startTransaction();
+
+
     try {
-      await this.productRepository.save( product );
-      return product;
+
+      if( images ) {
+        await queryRunner.manager.delete( ProductImage, { product: {id} }  ); //segundo argumento es el where
+        //delete * from ProductImage IMPORTANTE AGREGAR EL SEGUNDO ARGUEMNTO PARA NO ELIMINAR TODOS LOS REGISTROS
+        product.images = images.map( image => this.productImageRepository.create({url: image}));
+      }
+
+      await queryRunner.manager.save( product );
+
+      await queryRunner.commitTransaction();
+      await queryRunner.release();
+      // await this.productRepository.save( product );
+      return this.findOnePlane( id );
     } catch (error) {
+      await queryRunner.rollbackTransaction();
+      await queryRunner.release();
+
       this.handleDBExceptions(error);
     }
   }
