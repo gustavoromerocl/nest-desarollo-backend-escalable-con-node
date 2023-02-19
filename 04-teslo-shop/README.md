@@ -20,8 +20,6 @@ docker compose up -d
 
 [Teslo-Seed](https://gist.github.com/Klerith/1fb1b9f758bb0c5b2253dfc94f09e1b6)
 
-[QueryRunner](https://orkhan.gitbook.io/typeorm/docs/query-runner)
-
 # Notas
 
 Mostrar los puertos usados por contenedores docker
@@ -32,3 +30,5 @@ sudo lsof -i -P -n | grep <port number>
 # Bibliografía
 
 [Eager relations](https://typeorm.io/eager-and-lazy-relations)
+[QueryRunner](https://orkhan.gitbook.io/typeorm/docs/query-runner)
+[File Upload](https://docs.nestjs.com/techniques/file-upload)
