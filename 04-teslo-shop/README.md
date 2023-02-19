@@ -14,6 +14,8 @@ docker compose up -d
 ```
 6. Ejecutar ```npm run start:dev```
 
+7. Ejecutar SEED ```localhost:3000/api/seed```
+
 # Recursos
 
 [Teslo-Seed](https://gist.github.com/Klerith/1fb1b9f758bb0c5b2253dfc94f09e1b6)
