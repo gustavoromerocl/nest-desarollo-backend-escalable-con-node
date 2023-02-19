@@ -338,6 +338,16 @@ Aplanar resultados
 
 La idea es hacer que nuestro endpoint de creación y actualización de producto permita la actualización de una tabla secundaria de la misma forma como lo hemos creado en la sección pasada.
 
+## Sección 12
+
+### Temas puntuales de la sección
+
+Esta sección es bien interesante porque trabajaremos con la carga de archivos a nuestro backend. Idealmente recuerden, que no es recomendado colocar archivos físicamente en nuestro backend, lo que se recomienda es subirlos y colocarlos en un hosting o servicio diferente.
+
+Pero el conocimiento de tomar y ubicar el archivo en otro lugar de nuestro file system es bastante útil.
+
+Aquí veremos validaciones y control de carga de cualquier archivo hacia nuestro backend.
+
 # Bibliografía
 
 * [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
