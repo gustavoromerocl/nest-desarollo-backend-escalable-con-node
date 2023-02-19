@@ -6,6 +6,7 @@ import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { Product, ProductImage } from './entities';
 import { validate as isUUID } from 'uuid';
+import { query } from 'express';
 
 @Injectable()
 export class ProductsService {
@@ -140,5 +141,19 @@ export class ProductsService {
 
     this.logger.error(error);
     throw new InternalServerErrorException('Unexpected error, check server logs');
+  }
+
+  async deleteAllProducts() {
+    const query = this.productRepository.createQueryBuilder('product');
+
+    try {
+      return await query
+        .delete()
+        .where({})
+        .execute();
+        
+    } catch (error) {
+      this.handleDBExceptions(error);
+    }
   }
 }
