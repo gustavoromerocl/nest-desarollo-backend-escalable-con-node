@@ -11,7 +11,10 @@ export class User {
   })
   email: string;
   
-  @Column('text')
+  @Column('text', {
+    //Oculta la columna en las consultas a el API
+    select: false
+  })
   password: string;
 
   @Column('text')
