@@ -32,3 +32,4 @@ sudo lsof -i -P -n | grep <port number>
 [Eager relations](https://typeorm.io/eager-and-lazy-relations)
 [QueryRunner](https://orkhan.gitbook.io/typeorm/docs/query-runner)
 [File Upload](https://docs.nestjs.com/techniques/file-upload)
+[Authentication](https://docs.nestjs.com/security/authentication)
