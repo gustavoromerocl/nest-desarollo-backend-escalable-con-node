@@ -6,22 +6,18 @@ import { User } from './entities/user.entity';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { JwtStrategy } from './strategies/jwt.strategy';
 
 @Module({
   controllers: [AuthController],
-  providers: [AuthService],
+  providers: [AuthService, JwtStrategy],
   imports: [
+    ConfigModule,
     TypeOrmModule.forFeature([
       User,
     ]),
     PassportModule.register({ defaultStrategy: 'jwt' }),
-    // JwtModule.register({
-    //   secret: process.env.JWT_SECRET,
-    //   signOptions: {
-    //     expiresIn: '2h'
-    //   }
-    // })
-
+    
     //Importar de forma asincrona nos permite realizar acciones antes de la renderización del módulo
     //Dentro de las opciones podemos importar otros modulos, e inyectar depenencias de estos mismos como el config service de config module
     //Use factory construye la configuración del m´dulo con las dependencias pre cargadas listas para ser usadas
@@ -34,8 +30,14 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
           expiresIn: '2h'
         }
       })
-    })
+    }),
+    // JwtModule.register({
+    //   secret: process.env.JWT_SECRET,
+    //   signOptions: {
+    //     expiresIn: '2h'
+    //   }
+    // })
   ],
-  exports: [TypeOrmModule]
+  exports: [TypeOrmModule, JwtStrategy, PassportModule, JwtModule]
 })
 export class AuthModule { }
