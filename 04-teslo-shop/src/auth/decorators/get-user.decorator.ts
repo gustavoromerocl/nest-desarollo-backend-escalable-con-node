@@ -5,7 +5,7 @@ export const GetUSer = createParamDecorator(
     console.log(data);
 
     const req = ctx.switchToHttp().getRequest();
-    const user = req.user = req.user;
+    const user = req.user;
 
     // if(data === 'email') return req.user.email;
     if (!user)
