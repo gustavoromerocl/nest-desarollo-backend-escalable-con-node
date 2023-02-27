@@ -7,6 +7,7 @@ import { UpdateProductDto } from './dto/update-product.dto';
 import { Product, ProductImage } from './entities';
 import { validate as isUUID } from 'uuid';
 import { query } from 'express';
+import { User } from 'src/auth/entities/user.entity';
 
 @Injectable()
 export class ProductsService {
@@ -22,14 +23,15 @@ export class ProductsService {
     private readonly dataSource: DataSource,
   ) { }
 
-  async create(createProductDto: CreateProductDto) {
+  async create(createProductDto: CreateProductDto, user: User) {
     //Rest operator
     const { images = [], ...productProps} = createProductDto
     try {
       const product = this.productRepository.create({
         //Spread operator
         ...productProps,
-        images: images.map( image => this.productImageRepository.create({url: image}))
+        images: images.map( image => this.productImageRepository.create({url: image})),
+        user
       });
       console.log('product', product)
       await this.productRepository.save(product);
@@ -79,7 +81,7 @@ export class ProductsService {
   }
 
 
-  //Generamos un nuevo método para palnar las imágenes ya que al modificar el retorno el findOne rompe su funcionaliddad en otro métodos de la clase
+  //Generamos un nuevo método para planar las imágenes ya que al modificar el retorno el findOne rompe su funcionaliddad en otro métodos de la clase
   async findOnePlane(term: string) {
     const { images = [], ...rest } = await this.findOne( term );
     return {
@@ -88,7 +90,7 @@ export class ProductsService {
     }
   }
 
-  async update(id: string, updateProductDto: UpdateProductDto) {
+  async update(id: string, updateProductDto: UpdateProductDto, user: User) {
 
     const {images, ...toUpdate} = updateProductDto;//rest
 
@@ -115,6 +117,8 @@ export class ProductsService {
         product.images = images.map( image => this.productImageRepository.create({url: image}));
       }
 
+      product.user = user;
+      
       await queryRunner.manager.save( product );
 
       await queryRunner.commitTransaction();
