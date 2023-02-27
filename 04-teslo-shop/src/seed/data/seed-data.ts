@@ -1,4 +1,6 @@
 // https://gist.github.com/Klerith/1fb1b9f758bb0c5b2253dfc94f09e1b6
+import * as bcrypt from 'bcrypt';
+
 interface SeedProduct {
   description: string;
   images: string[];
@@ -34,13 +36,13 @@ export const initialData: SeedData = {
     {
         email: 'test@google.com',
         fullName: 'Test One',
-        password: 'Abc123',
+        password: bcrypt.hashSync('Abc123', 10),
         roles: ['admin']
     },
     {
         email: 'test2@google.com',
         fullName: 'Test two',
-        password: 'Abc123',
+        password: bcrypt.hashSync('Abc123', 10),
         roles: ['user', 'super']
     }
   ],
