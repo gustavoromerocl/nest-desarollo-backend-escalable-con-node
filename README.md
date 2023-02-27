@@ -397,3 +397,8 @@ Hay varias tareas dentro de esta sección que esperaría que intenten llevar con
 * [Mongo plugin (NEST)](https://docs.nestjs.com/techniques/mongodb)
 * [Dockerfile](https://gist.github.com/Klerith/e7861738c93712840ab3a38674843490)
 * [Database (Postgres)](https://docs.nestjs.com/techniques/database)
+* [Eager relations](https://typeorm.io/eager-and-lazy-relations)
+* [QueryRunner](https://orkhan.gitbook.io/typeorm/docs/query-runner)
+* [File Upload](https://docs.nestjs.com/techniques/file-upload)
+* [Authentication](https://docs.nestjs.com/security/authentication)
+* [Decorator composition](https://docs.nestjs.com/custom-decorators#decorator-composition)
