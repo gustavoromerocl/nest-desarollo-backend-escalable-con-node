@@ -1,5 +1,6 @@
 // https://gist.github.com/Klerith/1fb1b9f758bb0c5b2253dfc94f09e1b6
-import { BeforeInsert, BeforeUpdate, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { User } from "src/auth/entities/user.entity";
+import { BeforeInsert, BeforeUpdate, Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { ProductImage } from './product-image.entity';
 
 @Entity({ name: 'products'})
@@ -57,6 +58,13 @@ export class Product {
     }
   )
   images?: ProductImage[];
+
+  @ManyToOne(
+    () => User,
+    ( user ) => user.product,
+    { eager: true }
+  )
+  user: User
 
   @BeforeInsert()
   checkSlugInsert() {
