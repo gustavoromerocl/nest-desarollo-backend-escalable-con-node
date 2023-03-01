@@ -416,3 +416,4 @@ Nest Swagger
 * [File Upload](https://docs.nestjs.com/techniques/file-upload)
 * [Authentication](https://docs.nestjs.com/security/authentication)
 * [Decorator composition](https://docs.nestjs.com/custom-decorators#decorator-composition)
+* [Open API](https://docs.nestjs.com/openapi/introduction)
