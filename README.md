@@ -443,3 +443,4 @@ Prevenir doble conexión de usuarios autenticados.
 * [Authentication](https://docs.nestjs.com/security/authentication)
 * [Decorator composition](https://docs.nestjs.com/custom-decorators#decorator-composition)
 * [Open API](https://docs.nestjs.com/openapi/introduction)
+* [Web sockets](https://docs.nestjs.com/websockets/gateways)
