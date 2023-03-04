@@ -9,11 +9,11 @@ export class MessageWsGateway implements OnGatewayConnection, OnGatewayDisconnec
   ) { }
 
   handleConnection(client: Socket, ...args: any[]) {
-    console.log('Cliente conectado: ', client.id)
+    this.messageWsService.registerClient(client);
+
+    console.log({conectados: this.messageWsService.getConnectedClients()})
   }
   handleDisconnect(client: Socket) {
-    console.log('Cliente desconectado: ', client.id)
+    this.messageWsService.removeclient(client.id);
   }
-
-
 }
