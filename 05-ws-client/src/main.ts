@@ -5,6 +5,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <div>
   <h1>Web socket client</h1>
   <span id="server-status">offline</span>
+
+  <ul id="clients-ul">
+    
+  </ul>
 </div>
 `
 
