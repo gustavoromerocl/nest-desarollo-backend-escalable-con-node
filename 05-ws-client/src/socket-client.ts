@@ -5,27 +5,26 @@ export const connectToServer = () => {
   // localhost:3000/socket.io/socket.io.js
 
   const socket = manager.socket('/'); //Recibe el namespace, el '/' conecta al root 
-  console.log('socket', socket);
+  // console.log('socket', socket);
 
   addListeners( socket );
 };
 
 
 const addListeners = (socket: Socket) => {
-  const serverStatusLabel = document.querySelector('#server-status');
-  const clientsUL = document.querySelector('#clients-ul');
-  //#clients-ul
+  const serverStatusLabel = document.querySelector<HTMLSpanElement>('#server-status')!; //!Indica que siempre va a existir
+  const clientsUL = document.querySelector<HTMLOListElement>('#clients-ul')!;
+  const messageForm = document.querySelector<HTMLFormElement>('#message-form')!;
+  const messageInput = document.querySelector<HTMLInputElement>('#message-input')!;
 
   // socket.on(): Escuchar el servidor
   // socket.emit(): Enviar al servidor
 
   socket.on('connect', () => {
-    if(serverStatusLabel)
       serverStatusLabel.innerHTML = 'connected';
   });
 
   socket.on('disconnect', () => {
-    if(serverStatusLabel)
       serverStatusLabel.innerHTML = 'disconnected';
   });
 
@@ -39,7 +38,19 @@ const addListeners = (socket: Socket) => {
       `
     });
 
-    if(clientsUL)
     clientsUL.innerHTML = clientsHtml;
+  })
+
+  messageForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if(messageInput.value.trim().length <= 0) return;
+
+    socket.emit('message-from-client', {
+      id: 'Yo!!', 
+      message: messageInput.value
+    })
+    
+    messageInput.value = '';
   })
 }
