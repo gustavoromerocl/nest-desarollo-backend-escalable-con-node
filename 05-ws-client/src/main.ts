@@ -3,8 +3,8 @@ import './style.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <div>
-<h1>Web socket client</h1>
-<span>offline</span>
+  <h1>Web socket client</h1>
+  <span id="server-status">offline</span>
 </div>
 `
 
