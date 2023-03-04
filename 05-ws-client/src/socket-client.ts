@@ -13,9 +13,10 @@ export const connectToServer = () => {
 
 const addListeners = (socket: Socket) => {
   const serverStatusLabel = document.querySelector<HTMLSpanElement>('#server-status')!; //!Indica que siempre va a existir
-  const clientsUL = document.querySelector<HTMLOListElement>('#clients-ul')!;
+  const clientsUL = document.querySelector<HTMLUListElement>('#clients-ul')!;
   const messageForm = document.querySelector<HTMLFormElement>('#message-form')!;
   const messageInput = document.querySelector<HTMLInputElement>('#message-input')!;
+  const messagesUL = document.querySelector<HTMLUListElement>('#messages-ul')!;
 
   // socket.on(): Escuchar el servidor
   // socket.emit(): Enviar al servidor
@@ -39,6 +40,18 @@ const addListeners = (socket: Socket) => {
     });
 
     clientsUL.innerHTML = clientsHtml;
+  });
+
+  socket.on('message-from-server', (payload: { fullName: string, message: string }) => {
+    const newMessage = `
+    <li>
+      <strong>${payload.fullName}</strong>
+      <span>${payload.message}</span>
+    </li>`;
+
+    const li = document.createElement('li');
+    li.innerHTML = newMessage;
+    messagesUL.append(li);
   })
 
   messageForm.addEventListener('submit', (event) => {
@@ -52,5 +65,5 @@ const addListeners = (socket: Socket) => {
     })
     
     messageInput.value = '';
-  })
+  });
 }
