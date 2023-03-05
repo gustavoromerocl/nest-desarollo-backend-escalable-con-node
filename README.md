@@ -424,6 +424,36 @@ Desconectar sockets manualmente
 
 Prevenir doble conexión de usuarios autenticados.
 
+## Sección 16: Desplegar toda la aplicación a producción
+
+### Temas puntuales de la sección
+
+Esta sección trabajaremos en desplegar todo el backend y frontend, pero puntualmente aprenderemos:
+
+Heroku CLI
+
+Logs y Tails de logs
+
+Manejo de errores en producción
+
+Configuración de variables de entorno
+
+Postgres en la nube
+
+Despliegue en Netlify
+
+Pruebas de aplicación
+
+CORS
+
+Generar build de producción VITE
+
+y mucho más
+
+Espero que esta sección les guste mucho y nos vemos en el siguiente video!! :D
+
+
+
 # Bibliografía
 
 * [Instalaciones recomendadas](https://gist.github.com/Klerith/c0ef4f48d986e2cf3308bb54fff84ea5)
